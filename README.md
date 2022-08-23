@@ -1,5 +1,7 @@
 Study Tool Overview
 
+Avaible to try at https://kfwainsc.github.io/study_tool/quizFace
+
 This quiz program is intended as a study tool as the user can keep guessing till they get the question right. However, it does keep track of attempts on each question and an accuracy percentage is given at the end. Feedback and reference information pertaining to the question becomes available upon answering.
 
 The quiz can be restarted or terminated at any time. Until the quiz is terminated the user is free to go backwards/forwards through the questions. A list of correct, incorrect (if not right on first attempt) and unanswered questions is displayed upon termination.
