@@ -1,3 +1,6 @@
+<!-- by Kendra Wainscott 2022
+     ACTIVE QUIZ FACE for "STUDY TOOL" quiz project 
+-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,73 +12,76 @@
     <title>Draft Quiz</title>
   </head>
   <body>
-    <header>
-      <h1 id="quiz-title">Quiz</h1>
-      <h2 id="subtitle">Subtitle</h2>
-      <div id="stats">
-        <h3 id="correct-count">Correct: 0</h3>
-      </div>
-    </header>
-    <main>
-      <div id="running-quiz" class="quiz-box">
-        <form action="">
-          <h2 id="question">Question?</h2>
-          <div class="options-container">
-            <div class="option-bundle">
-              <input id="radio-A" class="option" type="radio" name="option" value="A" />
-              <label id="option-A" for="radio-A" class="option-label"> Option A </label>
-            </div>
-            <div class="option-bundle">
-              <input id="radio-B" class="option" type="radio" name="option" value="B" />
-              <label for="radio-B" class="option-label"> Option B </label>
-            </div>
-            <div class="option-bundle">
-              <input id="radio-C" class="option" type="radio" name="option" value="C" />
-              <label for="radio-C" class="option-label"> Option C </label>
-            </div>
-            <div class="option-bundle">
-              <input id="radio-D" class="option" type="radio" name="option" value="D" />
-              <label for="radio-D" class="option-label"> Option D </label>
-            </div>
-            <div class="option-bundle">
-              <input id="radio-E" class="option" type="radio" name="option" value="E" />
-              <label for="radio-E" class="option-label"> Option E </label>
-            </div>
-          </div>
-        </form>
-        <div id="feedback">
-          <h2 id="feedback-correct"></h2>
-          <h3 id="feedback-answer"></h3>
-          <h3 id="attempts"></h3>
+    <div class="outside-container">
+      <header>
+        <h1 id="quiz-title">Quiz</h1>
+        <h2 id="subtitle">Subtitle</h2>
+        <div id="stats">
+          <h3 id="correct-count">Correct: 0</h3>
         </div>
-        <nav id="quiz-nav" class="quiz-nav">
-          <button id="btn-back" class="btn">Back</button>
-          <button id="btn-check-answer" class="btn" type="submit">Check</button>
-          <button id="btn-next" class="btn">Next</button>
-        </nav>
-      </div>
-      <div id="final-results" class="quiz-box">
-        <h2>Final Results</h2>
-        <span>
-          <h3 id="accuracy">Accuracy:</h3>
-        </span>
-        <hr />
-        <h3 class="results-h">Excellent Work!</h3>
-        <p id="excellent" class="results-p"></p>
-        <h3 class="results-h">Needs Review</h3>
-        <p id="to-review" class="results-p"></p>
-        <h4 class="results-h">Unanswered:</h4>
-        <p id="unasked" class="results-p"></p>
-        <hr />
-      </div>
-      <div id="logo-container">
-        <button id="btn-reset" class="btn">Restart<br />Quiz</button>
-        <img id="logo" src="" alt="" />
-        <button id="btn-finish" class="btn">End<br />Quiz</button>
-      </div>
-    </main>
-    <footer>
-      <h6>&copy;Kendra Wainscott Studios</h6>
-    </footer>
+      </header>
+      <main>
+        <div id="running-quiz" class="quiz-box">
+          <form action="">
+            <h2 id="question">Question?</h2>
+            <div class="options-container">
+              <div class="option-bundle">
+                <input id="radio-A" class="option" type="radio" name="option" value="A" />
+                <label id="option-A" for="radio-A" class="option-label"> Option A </label>
+              </div>
+              <div class="option-bundle">
+                <input id="radio-B" class="option" type="radio" name="option" value="B" />
+                <label for="radio-B" class="option-label"> Option B </label>
+              </div>
+              <div class="option-bundle">
+                <input id="radio-C" class="option" type="radio" name="option" value="C" />
+                <label for="radio-C" class="option-label"> Option C </label>
+              </div>
+              <div class="option-bundle">
+                <input id="radio-D" class="option" type="radio" name="option" value="D" />
+                <label for="radio-D" class="option-label"> Option D </label>
+              </div>
+              <div class="option-bundle">
+                <input id="radio-E" class="option" type="radio" name="option" value="E" />
+                <label for="radio-E" class="option-label"> Option E </label>
+              </div>
+            </div>
+          </form>
+          <div id="feedback">
+            <h2 id="feedback-correct"></h2>
+            <h3 id="feedback-answer"></h3>
+            <h3 id="feedback-location"></h3>
+            <h3 id="attempts"></h3>
+          </div>
+          <nav id="quiz-nav" class="quiz-nav">
+            <button id="btn-back" class="btn">Back</button>
+            <button id="btn-check-answer" class="btn" type="submit">Check</button>
+            <button id="btn-next" class="btn">Next</button>
+          </nav>
+        </div>
+        <div id="final-results" class="quiz-box">
+          <h2>Final Results</h2>
+          <span>
+            <h3 id="accuracy">Accuracy:</h3>
+          </span>
+          <hr />
+          <h3 class="results-h">Excellent Work!</h3>
+          <p id="excellent" class="results-p"></p>
+          <h3 class="results-h">Needs Review</h3>
+          <p id="to-review" class="results-p"></p>
+          <h4 class="results-h">Unanswered:</h4>
+          <p id="unasked" class="results-p"></p>
+          <hr />
+        </div>
+        <div id="logo-container">
+          <button id="btn-reset" class="btn">Restart<br />Quiz</button>
+          <img id="logo" src="" alt="" />
+          <button id="btn-finish" class="btn">End<br />Quiz</button>
+        </div>
+      </main>
+      <footer>
+        <h6>&copy;Kendra Wainscott Studios</h6>
+      </footer>
+    </div>
   </body>
 </html>
