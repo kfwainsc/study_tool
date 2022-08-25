@@ -12,7 +12,10 @@
         "Taser® darts will be removed by EMS personnel only if EMS was already dispatched to the scene for a medical/trauma event.",
         "None Listed."
       ],
-      "feedback": "All listed: Do not remove unless the airway is compromised.<br>Secure the object in place.<br>Taser® darts will be removed by EMS personnel only if EMS was already dispatched to the scene for a medical/trauma event.<br> See pg 34, Note items 1-12 on Taser® barbed darts"
+      "feedback": {
+        "info": "All listed: Do not remove unless the airway is compromised.<br>Secure the object in place.<br>Taser® darts will be removed by EMS personnel only if EMS was already dispatched to the scene for a medical/trauma event.",
+        "location": "See pg 34, Note items 1-12 on Taser® barbed darts"
+      }
     },
     {
       "ask": "Under Medical Bleeding:<br>Utilize M.A.R.C.H. to immediately identify and treat life-threatening conditions.<br>Which of the following is the correct definition of M.A.R.C.H ?",
@@ -21,17 +24,20 @@
         "Major Bleeding, Airway, Rate of Circulation, Cyanosis, Hypothermia",
         "Minor Bleeding, Attentive, Rate of Circulation, Cyanosis, Hypothermia"
       ],
-      "feedback": "Massive Bleeding, Airway, Respirations, Circulation, Hypothermia<br>See Pg 29"
+      "feedback": {
+        "info": "Massive Bleeding, Airway, Respirations, Circulation, Hypothermia",
+        "location": "See Pg 29"
+      }
     },
     {
       "ask": "Overdose:<br>All overdoses that are unstable/ALOC/AMS shall be dispatched as ALS. 2.",
       "options": ["True", "False"],
-      "feedback": "TRUE See pg 50"
+      "feedback": {"info": "TRUE", "location": "See pg 50"}
     },
     {
       "ask": "Limit scene time for no-cardiac arrest patients, with goal of ≤ 15 minutes.",
       "options": ["True", "False"],
-      "feedback": "TRUE\nSee pg 39"
+      "feedback": {"info": "TRUE", "location": "See pg 39"}
     },
     {
       "ask": "Which of the following are NOT in the Decision-Making Capacity Checklist...",
@@ -43,7 +49,10 @@
         "Absent of dementia",
         "Absent of attempted suicide, verbalized suicidal intent, or other factors suggesting suicidal intent"
       ],
-      "feedback": "ALL are included in the Decision-Making Capacity Checklist\nSee pg 10"
+      "feedback": {
+        "info": "ALL are included in the Decision-Making Capacity Checklist: GCS 15<br>Patient is oriented<br>Patient is neither physically, nor cognitively impaired by alcohol and/or drug(s)<br>Absent of dementia<br>Absent of attempted suicide, verbalized suicidal intent, or other factors suggesting suicidal intent",
+        "location": "See pg 10"
+      }
     }
   ]
 }
