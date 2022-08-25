@@ -28,9 +28,12 @@ const resetBtn = document.getElementById("btn-reset");
 const finishBtn = document.getElementById("btn-finish");
 // feedback and counters
 const attempts = document.getElementById("attempts");
+const correctCount = document.getElementById("correct-count");
 const feedback = document.getElementById("feedback");
 const feedbackCorrect = document.getElementById("feedback-correct");
 const feedbackAnswer = document.getElementById("feedback-answer");
+const feedbackLocation = document.getElementById("feedback-location");
+
 // restart & finish
 const runningQuiz = document.getElementById("running-quiz");
 const finalResults = document.getElementById("final-results");
@@ -91,8 +94,8 @@ const setNewOptions = (newQ) => {
   for (const option of currOptions) {
     if (newQ.options[i] == undefined) {
       currOptBundles[i].style.display = "none";
-      option.innerHTML = "";
-      radioBtns[i].value = "";
+      option.innerHTML = ""; ////////////////////////////
+      radioBtns[i].value = ""; ////////////////////////
       radioBtns[i].checked = false;
     } else {
       currOptBundles[i].style.display = "block";
@@ -109,16 +112,23 @@ const setNewOptions = (newQ) => {
 
 // for new question, set new answers for radio buttons
 const setNewQuestion = () => {
-  //let okay = quiz.goNext;
+  //below can be better logic or fixed with submit
   if (quiz.goNext || quiz.getCurrQuest().attempts > 0) {
-    feedback.style.display = "none";
-    let currQ = quiz.askQuestion();
+    feedback.style.display = "none"; //can probs removew wt logic
+    const currQ = quiz.askQuestion();
     currAsk.innerHTML = currQ.ask;
-    setNewOptions(currQ);
-    checkValidBtns();
     if (currQ.done) {
-      displayFeedback(true);
+      quiz.goNext = true; ////////////////*
+      displayFinishedQuest(currQ);
+      displayFeedback("true");
+    } else {
+      setNewOptions(currQ); //diplay all opts if not done or new
+      if (currQ.attempts > 0) {
+        displayFeedback(false);
+        quiz.goNext = true; ////////////////*
+      }
     }
+    checkValidBtns();
   } else alert("question must be checked before moving on");
 };
 nextBtn.addEventListener("click", setNewQuestion);
@@ -126,6 +136,7 @@ nextBtn.addEventListener("click", setNewQuestion);
 // inital set up, also called for reset
 const setUp = () => {
   feedback.style.display = "none";
+  correctCount.innerHTML = "Correct: 0";
   let currQ = quiz.askQuestion();
   currAsk.innerHTML = currQ.ask;
   setNewOptions(currQ);
@@ -136,17 +147,19 @@ setUp();
 const displayFeedback = (correct) => {
   if (correct) {
     feedbackCorrect.innerHTML = "CORRECT :)";
-    feedbackAnswer.innerHTML = `${quiz.getCurrQuest().feedback}`;
     feedbackCorrect.style.color = "green";
+    feedbackAnswer.innerHTML = `${quiz.getCurrQuest().feedback.info}`;
+    feedbackLocation.innerHTML = `${quiz.getCurrQuest().feedback.location}`;
   } else {
     feedbackCorrect.innerHTML = "INCORRECT :(";
     feedbackCorrect.style.color = "red";
     feedbackAnswer.innerHTML = "";
+    feedbackLocation.innerHTML = `${quiz.getCurrQuest().feedback.location}`;
   }
+  /// MOVE TO set Question??
   attempts.innerHTML = `Attempts: ${quiz.getCurrQuest().attempts}`;
-  document.getElementById(
-    "correct-count"
-  ).innerHTML = `Correct: ${quiz.correctCount} of ${quiz.questList.length}`;
+  correctCount.innerHTML = `Correct: ${quiz.correctCount} of ${quiz.questList.length}`;
+  // REDUNANT somwwhere?
   feedback.style.display = "block";
 };
 
@@ -178,14 +191,14 @@ const displayFinishedQuest = (doneQ) => {
 
 const previousQuestion = () => {
   //feedback.style.display = "block";
-  let currQ = quiz.previousQuest();
+  const currQ = quiz.previousQuest();
   currAsk.innerHTML = currQ.ask;
   if (currQ.done) {
     displayFinishedQuest(currQ);
   } else {
     setNewOptions(currQ);
   }
-  if (currQ.done === true) displayFeedback("true");
+  if (currQ.done) displayFeedback("true");
   else if (currQ.attempts > 0) displayFeedback(false);
   checkValidBtns();
   quiz.goNext = true;
@@ -213,7 +226,6 @@ const restartQuiz = () => {
       document.getElementById("accuracy").innerHTML = "Accuracy:";
       finishBtn.disabled = false;
     }
-
     quiz.restart();
     setUp();
   }
@@ -224,11 +236,11 @@ const displayAllQuestions = () => {
   document.getElementById("accuracy").innerHTML += `${quiz.calcAccuracy()}%`;
   for (const quest of quiz.questList) {
     if (quest.done === true && quest.attempts === 1) {
-      excellent.innerHTML += `<br>${quest.ask}<br>${quest.feedback}<br>`;
+      excellent.innerHTML += `<br>${quest.ask}<br>${quest.feedback.info}<br><b>${quest.feedback.location}</b><br>`;
     } else if (!quest.done && quest.attempts === 0) {
-      unasked.innerHTML += `<br>${quest.ask}<br>${quest.feedback}<br>`;
+      unasked.innerHTML += `<br>${quest.ask}<br>${quest.feedback.info}<br>${quest.feedback.location}<br>`;
     } else {
-      toReview.innerHTML += `<br>${quest.ask}<br>${quest.feedback}<br>Attempts: ${quest.attempts}<br>`;
+      toReview.innerHTML += `<br>${quest.ask}<br>${quest.feedback.info}<br>${quest.feedback.location}<br>Attempts: ${quest.attempts}<br>`;
     }
   }
   if (unasked.innerHTML === "") {
@@ -251,16 +263,3 @@ const finishQuiz = () => {
   finishBtn.disabled = true;
 };
 finishBtn.addEventListener("click", finishQuiz);
-
-/*const finishedJsonQuiz = JSON.stringify(quiz);
-export {finishedJsonQuiz};
-
-const finishQuiz = () => {
-  if (confirm("Are you sure you want to end this quiz?")) {
-    //window.location.href = "./quizResults.html";
-    const resultsMain = JSON.parse("./input_files/finalResults.json");
-    document.getElementsByTagName("main")[0].innerHTML = resultsMain;
-  }
-};
-finishBtn.addEventListener("click", finishQuiz);
-*/
