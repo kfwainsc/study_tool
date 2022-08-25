@@ -263,3 +263,16 @@ const finishQuiz = () => {
   finishBtn.disabled = true;
 };
 finishBtn.addEventListener("click", finishQuiz);
+
+/*const finishedJsonQuiz = JSON.stringify(quiz);
+export {finishedJsonQuiz};
+
+const finishQuiz = () => {
+  if (confirm("Are you sure you want to end this quiz?")) {
+    //window.location.href = "./quizResults.html";
+    const resultsMain = JSON.parse("./input_files/finalResults.json");
+    document.getElementsByTagName("main")[0].innerHTML = resultsMain;
+  }
+};
+finishBtn.addEventListener("click", finishQuiz);
+*/
