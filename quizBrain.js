@@ -1,3 +1,16 @@
+/***********************************************************
+  by Kendra Wainscott 2022
+  Contains the QUESTION and QUIZ class implementations 
+  for the "STUDY TOOL" quiz project.
+  Quiz objects contain a list of questions, stats on
+  the state of the ongoing quiz as well as the title
+  and subject of the Quiz instance. 
+  Question objects hold the question and answer itself
+  as well a "done" marker for when the question has been
+  properly answered. Questions also hold a guess "attempt"
+  count and feedback that contains the correct answer 
+  and the resource(s) for where to find it.  
+**********************************************************/
 export class Question {
   constructor(ask, options, feedback) {
     this._ask = ask;
@@ -18,6 +31,15 @@ export class Question {
   }
   get feedback() {
     return this._feedback;
+  }
+  getFeeback(choice) {
+    if (typeof choice !== string) throw new TypeError("getFeedback input must be type string");
+    else if (choice === "all") return this._feedback;
+    else if (choice === "info") return this._feedback.info;
+    else if (choice === "location") return this._feedback.location;
+    else {
+      throw new Error("Only valid getFeedback() inputs are strings: 'all', 'info' or 'location' ");
+    }
   }
   get done() {
     return this._done;
