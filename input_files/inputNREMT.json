@@ -1,0 +1,88 @@
+{
+  "title": "EMT-B PREP:",
+  "subtitle": "Overview Quiz",
+  "logo": "../images/EMT_WA_patch.jpg",
+  "questList": [
+    {
+      "ask": "When ventilating a patient with a pulse, you should squeeze the bag every  _______  seconds for an adult and every  _______  seconds for a child.",
+      "options": [
+        "5 to 6 and 3 to 5",
+        "5 to 6 and 5 to 6",
+        "2 to 3 and 6 to 8",
+        "8 to 10 and 6 to 8"
+      ],
+      "feedback": {
+        "info": " When ventilating a patient with a pulse, you should squeeze the bag every 5 to 6 seconds for an adult and every 3 to 5 seconds for a child.",
+        "location": "Normal respiration rate for an ADULT at rest is 12 to 16 breaths per minute for a CHILD 12 to 20 breaths per minute."
+      }
+    },
+    {
+      "ask": "The pressure or gas a full oxygen cylinder is approximately  _______  psi.",
+      "options": ["2,000", "1,500", "1,700", "2,500"],
+
+      "feedback": {
+        "info": "The pressure of gas in a full oxygen cylinder is approximately 2,000 psi. ",
+        "location": "See Pg __,  Resource document tbd"
+      }
+    },
+    {
+      "ask": "You encounter a four-month-old baby in cardiac arrest with unknown cause. What type of defibrillator would be most preferred?",
+      "options": [
+        "A manual defibrillator.",
+        "A defibrillator is not recommended for infants less than one year old.",
+        "AED with pediatric dose attenuator.",
+        "AED without pediatric dose attenuator."
+      ],
+      "feedback": {
+        "info": "A manual defibrillator is preferred for an infant less than one year old",
+        "location": "See Pg __,  Resource document tbd"
+      }
+    },
+    {
+      "ask": "What should you do when assessing a responsive adult patient with possible cardiac compromise?",
+      "options": [
+        "Apply high concentration oxygen.",
+        "Begin CPR, starting with respirations.",
+        "Check vitals and ventilate the patient",
+        "Attach and apply and AED immediately."
+      ],
+      "feedback": {
+        "info": "Apply high concentration oxygen when assessing a responsive adult patient with possible cardiac compromise.",
+        "location": "See Pg __,  Resource document tbd"
+      }
+    },
+    {
+      "ask": "ROSC Has been achieved in a patient. What does this mean?",
+      "options": [
+        "Patient regained consciousness",
+        "Patient's oxygen has normalized",
+        "Patient is taking spontaneous breaths"
+      ],
+      "feedback": {
+        "info": "ROSC Has been achieved when if a patient has regained consciousness",
+        "location": "ROSC: Return of Spontaneous Consciousness"
+      }
+    },
+    {
+      "ask": "What percentage oxygen does a BVM (bag valve mask) deliver, when it is not attached to oxygen?",
+      "options": ["21%", "33%", "18%", "45%"],
+      "feedback": {
+        "info": "A BVM delivers 21% oxygen when it is not attached to oxygen",
+        "location": "Room air is 21% oxygen"
+      }
+    },
+    {
+      "ask": "A patient has an open abdominal wound and their organs are protruding. You should:",
+      "options": [
+        "Cover with a sterile saline moistened gauze and secure with am occlusive dressing.",
+        "Immediately apply a pressure dressing over a sterile gauze.",
+        "Cover with a sterile moistened gauze and seal with a pressure dressing",
+        "Apply a sterile adhesive dressing"
+      ],
+      "feedback": {
+        "info": "A patient with an abdominal wound and protruding organs should have the wound covered with a sterile saline moistened gauze and secured with an occlusive dressing.",
+        "location": "See Pg __,  Resource document tbd"
+      }
+    }
+  ]
+}
