@@ -1,3 +1,6 @@
+Project: Study Tool
+by Kendra Wainscott 2022
+
 Study Tool Overview
 
 Avaible to try at https://kfwainsc.github.io/study_tool/quizFace
