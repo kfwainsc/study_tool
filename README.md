@@ -3,7 +3,7 @@ by Kendra Wainscott 2022
 
 Study Tool Overview
 
-Avaible to try at https://kfwainsc.github.io/study_tool/quizFace
+Avaible to try at https://kfwainsc.github.io/study_tool/index.html
 
 This quiz program is intended as a study tool as the user can keep guessing till they get the question right. However, it does keep track of attempts on each question and an accuracy percentage is given at the end. Feedback and reference information pertaining to the question becomes available upon answering.
 
