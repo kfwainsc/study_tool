@@ -10,7 +10,7 @@ This quiz program is intended as a study tool as the user can keep guessing till
 
 The quiz can be restarted or terminated at any time. Until the quiz is terminated the user is free to go backwards/forwards through the questions. A list of correct, incorrect (if not right on first attempt) and unanswered questions is displayed upon termination.
 
-![Screen shot preview of quiz](/study_tool/ScreenshotQuiz.jpg "Quiz Screenshot")
+![Screen shot preview of quiz](/ScreenshotQuiz.jpg "Quiz Screenshot")
 
 Written in HTML, CSS and JS it makes use of APIs and there is a small test suite using mocha.
 
