@@ -1,3 +1,4 @@
+/** ENTRYSCRIPT.JS **/
 /***********************************************************
   by Kendra Wainscott 2022    
   project:  Study Tool

@@ -1,11 +1,17 @@
-/********************************************
+/** ENTRYSTYLES.CSS **/
+/************************************************************
     by Kendra Wainscott 2022
     project:  Study Tool
 
-    styling for the LANDING PAGE of
+    styling for the ENTRY PAGE of
     the "STUDY TOOL" quiz project
-    sheet organized alphabetically (after html)
-*********************************************/
+
+    Primary style sheet, used for the entry page  
+    
+    This style sheet is organized by major section and 
+    then alphabetically, with relevant media queries at 
+    the end of each section.
+/***********************************************************/
 html {
   font-size: 16px;
   font-family: monospace;
@@ -15,7 +21,7 @@ html {
     font-size: 12px;
   }
 }
-/*******************************************/
+/************************************************************/
 body {
   background-color: whitesmoke;
   display: flex;
